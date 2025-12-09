@@ -1,0 +1,43 @@
+/* The class applied to hate speech content */
+.hate-speech-blur {
+    filter: blur(5px);
+    user-select: none;
+    cursor: default;
+    transition: filter 0.3s;
+    position: relative;
+    background-color: #ffe6e6; /* Light red tint to indicate warning */
+}
+
+/* The warning/show button container */
+.hate-guard-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+}
+
+/* The actual button */
+.hate-guard-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.hate-guard-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Class to unblur content */
+.hate-speech-revealed {
+    filter: none !important;
+    background-color: transparent !important;
+}
